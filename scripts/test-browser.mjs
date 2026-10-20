@@ -14,7 +14,7 @@ const server = createServer((request, response) => {
 await new Promise(resolve => server.listen(0, '127.0.0.1', resolve))
 let browser
 try {
-  browser = await chromium.launch({ channel: 'chrome', headless: true })
+  browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_CHANNEL || 'chrome', headless: true })
   const page = await browser.newPage({ viewport: { width: 960, height: 850 } })
   const errors = []
   page.on('pageerror', error => errors.push(error.message))

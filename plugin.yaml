@@ -1,0 +1,8 @@
+name: hermes-bot-vertical-threads
+version: 0.1.0
+description: Vertical bot and team conversations with editable names, drag ordering, and recent-activity sorting.
+author: Pablo Aguilar
+provides_tools: []
+provides_hooks: []
+provides_middleware: []
+requires_env: []

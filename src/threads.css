@@ -23,3 +23,20 @@
 .hvt-dialog label { display: block; margin-bottom: 10px; font-weight: 600; }
 .hvt-dialog input { box-sizing: border-box; width: 100%; padding: 9px; border: 1px solid var(--ui-stroke-secondary, #526260); border-radius: 5px; background: var(--ui-bg-secondary, #29393b); }
 .hvt-dialog p { margin: 12px 0 0; font-size: 11px; color: var(--ui-text-secondary, #b8c8c4); }
+.hvt-pane { height: 100%; overflow: auto; padding: 8px; box-sizing: border-box; }
+.hvt-pane-heading { display: flex; align-items: center; justify-content: space-between; padding: 8px; }
+.hvt-pane h2 { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--ui-text-tertiary, #b0bdbc); margin: 18px 8px 8px; }
+.hvt-pane p { font-size: 12px; margin: 8px; }
+.hvt-owner { display: flex; align-items: center; gap: 8px; width: 100%; padding: 12px 8px; text-align: left; border-radius: 5px; }
+.hvt-owner:hover { background: var(--ui-bg-hover, #2b3b3e); }
+.hvt-owner strong { overflow: hidden; text-overflow: ellipsis; }
+.hvt-owner small { margin-left: auto; font-size: 10px; color: var(--ui-text-secondary, #c3d0ce); }
+.hvt-chat { display: flex; flex-direction: column; height: 100%; box-sizing: border-box; padding: 18px; gap: 12px; }
+.hvt-chat header p { color: var(--ui-text-secondary, #c3d0ce); }
+.hvt-history { flex: 1; min-height: 0; overflow: auto; }
+.hvt-history article { margin-bottom: 12px; padding: 12px; border-radius: 6px; background: var(--ui-bg-secondary, #253137); }
+.hvt-history p { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.5; }
+.hvt-chat form { display: flex; flex-direction: column; gap: 8px; }
+.hvt-chat textarea { font: inherit; color: inherit; padding: 10px; min-height: 70px; border-radius: 5px; border: 1px solid var(--ui-stroke-secondary, #425454); background: var(--ui-bg-secondary, #253137); }
+.hvt-chat button, .hvt-action button { border: 1px solid var(--ui-stroke-secondary, #425454); padding: 8px 12px; border-radius: 5px; }
+.hvt-action pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 180px; overflow: auto; }

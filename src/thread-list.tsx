@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react'
+import { useCallback, useEffect, useId, useRef, useState, useSyncExternalStore } from 'react'
 import type { Thread, ThreadOwner } from './contracts'
 import { orderedThreads, ThreadPreferences } from './preferences'
 import './threads.css'
@@ -106,6 +106,8 @@ function RenameDialog({ title, onCancel, onSave }: {
   const [error, setError] = useState('')
   const dialog = useRef<HTMLDivElement>(null)
   const input = useRef<HTMLInputElement>(null)
+  const labelId = useId()
+  const inputId = useId()
   useEffect(() => {
     input.current?.focus()
     input.current?.select()
@@ -116,13 +118,13 @@ function RenameDialog({ title, onCancel, onSave }: {
     return () => document.removeEventListener('pointerdown', outside, true)
   }, [onCancel])
   return <div className="hvt-backdrop">
-    <div className="hvt-dialog" ref={dialog} role="dialog" aria-modal="true" aria-labelledby="hvt-rename-label"
+    <div className="hvt-dialog" ref={dialog} role="dialog" aria-modal="true" aria-labelledby={labelId}
       onKeyDown={event => {
         if (event.key === 'Escape') { event.stopPropagation(); onCancel(true) }
         if (event.key === 'Tab') { event.preventDefault(); input.current?.focus() }
       }}>
-      <label id="hvt-rename-label" htmlFor="hvt-rename-input">Rename thread</label>
-      <input ref={input} id="hvt-rename-input" value={draft} autoComplete="off"
+      <label id={labelId} htmlFor={inputId}>Rename thread</label>
+      <input ref={input} id={inputId} value={draft} autoComplete="off"
         onChange={event => setDraft(event.target.value)}
         onKeyDown={event => {
           if (event.key !== 'Enter' || event.nativeEvent.isComposing || event.keyCode === 229) return
