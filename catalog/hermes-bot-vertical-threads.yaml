@@ -1,0 +1,15 @@
+name: hermes-bot-vertical-threads
+repo: https://github.com/paguilar1227/hermes-bot-vertical-threads
+sha: 1b8aaff50d922fa2798ca0f1ed65c828609cc189
+description: Organize bot and team conversations vertically with editable names, drag ordering, and recent-activity sorting.
+maintainer: paguilar1227
+tier: community
+category: desktop
+title: Vertical Threads
+version: "0.1.0"
+readme: true
+capabilities:
+  provides_tools: []
+  provides_hooks: []
+  provides_middleware: []
+  requires_env: []
