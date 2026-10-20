@@ -1,0 +1,25 @@
+.hvt { color: var(--ui-text-primary, #e7eeed); font: inherit; font-size: 13px; min-width: 0; }
+.hvt button, .hvt select, .hvt input { font: inherit; color: inherit; }
+.hvt button { border: 0; background: transparent; cursor: pointer; }
+.hvt button:disabled { cursor: default; opacity: .45; }
+.hvt button:focus-visible, .hvt select:focus-visible, .hvt input:focus-visible { outline: 2px solid var(--ui-accent, #87c9bd); outline-offset: 2px; }
+.hvt-header { display: flex; align-items: center; justify-content: space-between; gap: 4px; padding: 2px 8px 4px 24px; }
+.hvt-toggle { display: flex; align-items: center; gap: 6px; color: var(--ui-text-tertiary, #b0bdbc) !important; padding: 4px 0; }
+.hvt-count { font-size: 11px; opacity: .7; }
+.hvt-sort { min-width: 0; max-width: 125px; padding: 3px; border: 0; border-radius: 4px; font-size: 11px !important; background: var(--ui-bg-secondary, #253137); }
+.hvt-branch { margin: 0 8px 12px 26px; padding: 0 0 0 8px; border-left: 1px solid var(--ui-stroke-secondary, #425454); }
+.hvt ul { list-style: none; margin: 0; padding: 0; }
+.hvt-row { display: flex; align-items: center; min-height: 36px; border-radius: 5px; }
+.hvt-row:hover { background: var(--ui-bg-hover, #2b3b3e); }
+.hvt-row.is-active { background: var(--ui-bg-selected, #30484c); }
+.hvt-row.is-dragging { opacity: .5; }
+.hvt-grip { flex: 0 0 22px; padding: 6px 2px; opacity: .55; cursor: grab !important; }
+.hvt-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: left; padding: 7px 3px; }
+.hvt-edit { flex: 0 0 30px; padding: 6px; font-weight: bold !important; }
+.hvt-new { padding: 8px 5px; color: var(--ui-text-secondary, #c3d0ce) !important; }
+.hvt-error { margin: 6px 8px; color: var(--ui-text-danger, #ffb4b4); font-size: 12px; }
+.hvt-backdrop { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; background: #0005; }
+.hvt-dialog { width: min(340px, calc(100vw - 32px)); box-sizing: border-box; padding: 20px; border: 1px solid var(--ui-stroke-secondary, #526260); border-radius: 10px; box-shadow: 0 12px 40px #0005; background: var(--ui-bg-primary, #202c31); }
+.hvt-dialog label { display: block; margin-bottom: 10px; font-weight: 600; }
+.hvt-dialog input { box-sizing: border-box; width: 100%; padding: 9px; border: 1px solid var(--ui-stroke-secondary, #526260); border-radius: 5px; background: var(--ui-bg-secondary, #29393b); }
+.hvt-dialog p { margin: 12px 0 0; font-size: 11px; color: var(--ui-text-secondary, #b8c8c4); }
